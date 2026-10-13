@@ -144,94 +144,179 @@
       border-radius: 5px;
       font-size: 12px;
     }
-  .certification-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  
-  .certification-image {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: contain;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 8px;
-  }
-  
-  .certification-card p {
-    color: var(--muted);
-    font-size: 14px;
-  }
-  
-  .certification-card .btn {
-    margin-top: 8px;
-  }
-  
-  .pdf-preview {
-    width: 100%;
-    min-height: 180px;
-    background: linear-gradient(135deg, #121e30, #20395d);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .pdf-preview span {
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--accent);
-  }
-  
-  .pdf-preview p {
-    color: var(--text);
-    font-weight: bold;
-  }
-  
-  .pdf-preview small {
-    color: var(--muted);
-  }
-    .timeline { border-left: 2px solid var(--border); padding-left: 22px; }
-    .timeline-item { margin-bottom: 25px; position: relative; }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -29px;
-      top: 8px;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--accent);
+    .certification-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
     }
-    .timeline-item p { color: var(--muted); font-size: 14px; }
-    .contact-box { text-align: center; }
-    .contact-box p { color: var(--muted); margin: 12px 0 22px; }
-    footer {
-      text-align: center;
+  
+    .certification-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 8px;
+    }
+    
+    .certification-card p {
       color: var(--muted);
-      padding: 25px 0;
-      font-size: 13px;
+      font-size: 14px;
     }
-    @media (max-width: 700px) {
-      nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
-      .nav-links { gap: 12px; }
-      .hero { grid-template-columns: 1fr; padding: 55px 0; }
-      .photo-wrap { grid-row: 1; }
-      .photo { width: 165px; height: 165px; }
-      .grid { grid-template-columns: 1fr; }
-      section { padding: 48px 0; }
+    
+    .certification-card .btn {
+      margin-top: 8px;
     }
-  </style>
-</head>
-<body>
+    
+    .pdf-preview {
+      width: 100%;
+      min-height: 180px;
+      background: linear-gradient(135deg, #121e30, #20395d);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .pdf-preview span {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    
+    .pdf-preview p {
+      color: var(--text);
+      font-weight: bold;
+    }
+    
+    .pdf-preview small {
+      color: var(--muted);
+    }
+      .timeline { border-left: 2px solid var(--border); padding-left: 22px; }
+      .timeline-item { margin-bottom: 25px; position: relative; }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -29px;
+        top: 8px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .timeline-item p { color: var(--muted); font-size: 14px; }
+      .contact-box { text-align: center; }
+      .contact-box p { color: var(--muted); margin: 12px 0 22px; }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 25px 0;
+        font-size: 13px;
+      }
+      @media (max-width: 700px) {
+        nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+        .nav-links { gap: 12px; }
+        .hero { grid-template-columns: 1fr; padding: 55px 0; }
+        .photo-wrap { grid-row: 1; }
+        .photo { width: 165px; height: 165px; }
+        .grid { grid-template-columns: 1fr; }
+        section { padding: 48px 0; }
+      }
+    
+      /* ===== Portfolio Animations ===== */
+      
+      /* Smooth entrance for the hero section */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .hero > div:first-child {
+        animation: fadeUp 0.8s ease-out both;
+      }
+      
+      .photo-wrap {
+        animation: fadeUp 1s ease-out 0.2s both;
+      }
+      
+      /* Scroll reveal for content sections */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s ease,
+                    transform 0.7s ease;
+      }
+      
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Smooth hover effects on cards */
+      .card,
+      .timeline-card,
+      .contact-card {
+        transition: transform 0.3s ease,
+                    border-color 0.3s ease,
+                    box-shadow 0.3s ease;
+      }
+      
+      .card:hover,
+      .timeline-card:hover,
+      .contact-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+        box-shadow: 0 10px 28px rgba(56, 125, 255, 0.12);
+      }
+      
+      /* Animated blue gradient on the headline */
+      .hero h1 span {
+        background-size: 200% auto;
+        animation: gradientShift 5s ease-in-out infinite alternate;
+      }
+      
+      @keyframes gradientShift {
+        from {
+          background-position: 0% center;
+        }
+        to {
+          background-position: 100% center;
+        }
+      }
+      
+      /* Respect accessibility preferences */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      
+        </style>
+      </head>
+      <body>
 
 <header>
   <nav class="container">
