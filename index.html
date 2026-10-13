@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pranit Sakpal - Business Analyst and Data Analyst portfolio showcasing banking analytics, Power BI, SQL, Python and AI projects.">
+  <title>Pranit Sakpal | Business & Data Analyst</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #121e30;
+      --panel2: #18273c;
+      --text: #edf3fc;
+      --muted: #a8b7cc;
+      --accent: #78aaff;
+      --border: #293b53;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: .8; }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,18,32,.96);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo { font-size: 19px; font-weight: bold; color: white; }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a { color: var(--muted); font-size: 14px; }
+    .hero {
+      padding: 90px 0 75px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.13; margin: 18px 0; }
+    h1 span { color: var(--accent); }
+    .intro { color: var(--muted); max-width: 620px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .btn.primary { background: var(--accent); color: #091323; }
+    .photo-wrap { text-align: center; }
+    .photo {
+      width: 230px;
+      height: 230px;
+      max-width: 100%;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      background: var(--panel2);
+      display: grid;
+      place-items: center;
+      margin: auto;
+      color: var(--muted);
+      overflow: hidden;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+    section { padding: 65px 0; border-top: 1px solid var(--border); }
+    .section-title { font-size: 30px; margin-bottom: 8px; }
+    .section-sub { color: var(--muted); margin-bottom: 28px; }
+    .about-box, .card, .contact-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .about-box p { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card { transition: transform .2s, border-color .2s; }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card h3 { margin-bottom: 10px; font-size: 19px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .tag {
+      background: var(--panel2);
+      color: #c6dcff;
+      padding: 4px 9px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .skills { display: flex; flex-wrap: wrap; gap: 12px; }
+    .skill {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .timeline { border-left: 2px solid var(--border); padding-left: 22px; }
+    .timeline-item { margin-bottom: 25px; position: relative; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .timeline-item p { color: var(--muted); font-size: 14px; }
+    .contact-box { text-align: center; }
+    .contact-box p { color: var(--muted); margin: 12px 0 22px; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 25px 0;
+      font-size: 13px;
+    }
+    @media (max-width: 700px) {
+      nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 12px; }
+      .hero { grid-template-columns: 1fr; padding: 55px 0; }
+      .photo-wrap { grid-row: 1; }
+      .photo { width: 165px; height: 165px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">PRANIT<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container hero" id="home">
+    <div>
+      <p class="eyebrow">Business Intelligence · Data Analytics</p>
+      <h1>Turning Data Into <span>Business Decisions.</span></h1>
+      <p class="intro">
+        Hi, I'm Pranit Sakpal, a Business and Data Analyst with an MBA
+        in Business Analytics and experience in banking analytics.
+        I use data, visualization and analytical thinking to uncover
+        insights and support better business decisions.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore My Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/YesPranitSakpal/"
+           target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <div class="photo">
+        <!-- Replace this placeholder with your photo file -->
+        <span id="photo-placeholder">Your Photo Here</span>
+        <img id="profile-photo" src="profile.jpg" alt="Pranit Sakpal"
+             hidden onerror="this.hidden=true">
+      </div>
+      <p class="photo-note">Business Analyst | Data Analyst</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">Analytics, business understanding and technology.</p>
+      <div class="about-box">
+        <p>
+          I have completed my MBA in Business Analytics and bring
+          experience in banking and data analysis. My interests include
+          business intelligence, customer analytics, campaign performance,
+          process improvement and AI-driven business solutions.
+          I enjoy translating complex data into clear insights that
+          stakeholders can use to make informed decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-sub">Tools and capabilities for analytical problem-solving.</p>
+      <div class="skills">
+        <span class="skill">SQL</span>
+        <span class="skill">Advanced Excel</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">DAX</span>
+        <span class="skill">Python</span>
+        <span class="skill">Data Visualization</span>
+        <span class="skill">KPI Reporting</span>
+        <span class="skill">ETL & Data Validation</span>
+        <span class="skill">Business Analysis</span>
+        <span class="skill">Customer Analytics</span>
+        <span class="skill">Predictive Modelling</span>
+        <span class="skill">AI Applications</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Selected analytics and AI projects.</p>
+      <div class="grid">
+
+        <article class="card">
+          <h3>01. Superstore Business Performance</h3>
+          <p>
+            An interactive business intelligence project designed to
+            examine sales, profitability, product performance and regional
+            trends to support data-driven decisions.
+          </p>
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">KPIs</span>
+            <span class="tag">Visualization</span>
+          </div>
+          <a href="#contact">Project details coming soon ↗</a>
+        </article>
+
+        <article class="card">
+          <h3>02. AI-Based Facial Recognition</h3>
+          <p>
+            An internship project at HDFC Bank focused on AI-based customer
+            verification, exploring facial feature comparison and cosine
+            similarity for identity matching.
+          </p>
+          <div class="tags">
+            <span class="tag">AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Cosine Similarity</span>
+            <span class="tag">Banking</span>
+          </div>
+          <a href="#contact">Project details coming soon ↗</a>
+        </article>
+
+        <article class="card">
+          <h3>03. FD Marketing Campaign Analysis</h3>
+          <p>
+            A portfolio case study to analyze fixed-deposit campaign
+            performance, customer segments, conversion rates and potential
+            opportunities to improve campaign effectiveness.
+          </p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Customer Analytics</span>
+          </div>
+          <a href="#contact">Case study coming soon ↗</a>
+        </article>
+
+        <article class="card">
+          <h3>04. Impact of AI on Business Performance</h3>
+          <p>
+            Research examining how AI adoption can influence business
+            performance, operational efficiency and decision-making,
+            with attention to measurable business outcomes.
+          </p>
+          <div class="tags">
+            <span class="tag">Business Research</span>
+            <span class="tag">AI Adoption</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <a href="#contact">Research details coming soon ↗</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience & Education</h2>
+      <p class="section-sub">My professional and academic background.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Banking & Analytics Experience</h3>
+          <p>
+            Experience across banking environments, with exposure to
+            data analysis, reporting, customer insights and business
+            processes. Add your exact company names, job titles and dates.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>HDFC Bank — Business Analyst Intern</h3>
+          <p>
+            May–July 2025 · Data Science Team. Internship project focused
+            on AI-based facial recognition for customer verification.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>MBA in Business Analytics</h3>
+          <p>
+            Completed · First Class · 80%
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications & Learning</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Business Analysis</h3>
+          <p>Harvard Business School Online course.</p>
+        </article>
+        <article class="card">
+          <h3>AI Essentials for Business</h3>
+          <p>Harvard Business School Online course.</p>
+        </article>
+        <article class="card">
+          <h3>Business Intelligence & Data Visualization</h3>
+          <p>Workshop certification.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>
+          Interested in business analytics, data analysis or business
+          intelligence opportunities? Visit my LinkedIn profile to connect.
+        </p>
+        <a class="btn primary"
+           href="https://www.linkedin.com/in/YesPranitSakpal/"
+           target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Pranit Sakpal · Business & Data Analyst</p>
+    <p>Built with HTML, CSS and JavaScript · Hosted on GitHub Pages</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const photo = document.getElementById("profile-photo");
+  photo.addEventListener("load", function () {
+    document.getElementById("photo-placeholder").hidden = true;
+  });
+</script>
+
+</body>
+</html>
