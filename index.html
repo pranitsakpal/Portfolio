@@ -60,6 +60,13 @@
       grid-template-columns: 1.5fr 1fr;
       gap: 45px;
       align-items: center;
+      background:
+        radial-gradient(
+        circle at 75% 45%,
+        rgba(37, 99, 235, 0.16),
+        transparent 35%
+         ),
+        linear-gradient(135deg, #071326, #0b1730 60%, #101d38);
     }
     .eyebrow {
       color: var(--accent);
@@ -68,8 +75,13 @@
       font-size: 18px;
       font-weight: bold;
     }
+    
     h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.13; margin: 18px 0; }
-    h1 span { color: var(--accent); }
+    .hero h1 span {background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+                   -webkit-background-clip: text;
+                   background-clip: text;
+                   color: transparent;}
+    
     .intro { color: var(--muted); max-width: 620px; }
     .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
     .btn {
@@ -83,8 +95,8 @@
     .btn.primary { background: var(--accent); color: #091323; }
     .photo-wrap { text-align: center; }
     .photo {
-      width: 320px;
-      height: 320px;
+      width: 400px;
+      height: 400px;
       max-width: 100%;
       border-radius: 50%;
       border: 3px solid var(--accent);
