@@ -139,7 +139,61 @@
       border-radius: 5px;
       font-size: 12px;
     }
-
+  .certification-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .certification-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .certification-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  .certification-card .btn {
+    margin-top: 8px;
+  }
+  
+  .pdf-preview {
+    width: 100%;
+    min-height: 180px;
+    background: linear-gradient(135deg, #121e30, #20395d);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pdf-preview span {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  
+  .pdf-preview p {
+    color: var(--text);
+    font-weight: bold;
+  }
+  
+  .pdf-preview small {
+    color: var(--muted);
+  }
     .timeline { border-left: 2px solid var(--border); padding-left: 22px; }
     .timeline-item { margin-bottom: 25px; position: relative; }
     .timeline-item::before {
@@ -181,6 +235,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -189,7 +244,7 @@
 <main>
   <div class="container hero" id="home">
     <div>
-      <p class="eyebrow">Business Analytics & Intelligence</p>
+      <p class="eyebrow">Data-Driven Business Analyst</p>
       <h1>From Raw Data to<span> Real Business Impact</span></h1>
       <p class="intro">
         Hi, I'm Pranit Sakpal, a Business Analyst bridging the gap between data and strategy 
@@ -401,6 +456,8 @@
           </p>
         </div>
       </article>
+     </div>
+    </div>
   </section>
 
   <section id="certifications">
