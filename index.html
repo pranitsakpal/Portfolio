@@ -8,13 +8,13 @@
   <title>Pranit Sakpal | Business Analyst</title>
   <style>
     :root {
-      --bg: #0b1220;
-      --panel: #121e30;
-      --panel2: #18273c;
-      --text: #edf3fc;
-      --muted: #a8b7cc;
-      --accent: #78aaff;
-      --border: #293b53;
+      --bg: #10271D;
+      --panel: #1B3829;
+      --panel2: #234532;
+      --text: #F1F5EE;
+      --muted: #B7C8B8;
+      --accent: #C6FF4D;
+      --border: #355641;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,11 +62,16 @@
       align-items: center;
       background:
         radial-gradient(
-        circle at 75% 45%,
-        rgba(37, 99, 235, 0.16),
-        transparent 35%
-         ),
-        linear-gradient(135deg, #071326, #0b1730 60%, #101d38);
+          circle at 75% 45%,
+          rgba(198, 255, 77, 0.10),
+          transparent 38%
+        ),
+        linear-gradient(
+          135deg,
+          #0B1C14,
+          #10271D 60%,
+          #193625
+        );
     }
     .about-tagline {
       font-size: clamp(18px, 2.2vw, 22px);
@@ -84,11 +89,19 @@
     }
     
     h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.13; margin: 18px 0; }
-    .hero h1 span {background: linear-gradient(90deg, #60a5fa, #a5b4fc);
-                   -webkit-background-clip: text;
-                   background-clip: text;
-                   color: transparent;}
-    
+    .hero h1 span {
+      background: linear-gradient(
+        90deg,
+        #C6FF4D,
+        #E3FF9E
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 200% auto;
+      animation: gradientShift 5s ease-in-out infinite alternate;
+    }
+        
     .intro { color: var(--muted); max-width: 620px; }
     .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
     .btn {
